@@ -2,3 +2,5 @@
 **/.vs
 **/*.exe
 **/*.out
+run-cpp/bin/
+run-cpp/src/
