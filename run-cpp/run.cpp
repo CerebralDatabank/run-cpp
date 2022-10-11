@@ -21,7 +21,7 @@ int main() {
   result = system("./bin/a.out");
   if (result != 0) {
     cout << endl << "\x1B[31m[ ERROR ]\x1B[0m Program run failed - check errors above.\x1B[0m" << endl;
-    cout << "          exit code \x1B[93m" << result << "\x1B[0m" << endl;
+    cout << "          exit code: \x1B[93m" << result << "\x1B[0m" << endl;
     return result;
   }
   cout << endl << "\x1B[32m[    OK ]\x1B[0m Program run succeeded!\x1B[0m" << endl;
