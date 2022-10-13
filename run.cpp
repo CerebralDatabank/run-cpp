@@ -1,5 +1,6 @@
 #include <iostream>
-using std::cout, std::endl;
+using std::cout;
+using std::endl;
 
 int main() {
   cout << "\x1B[96mrun v1.0.0-alpha by CerebralDatabank (Gopal Othayoth)\x1B[0m" << endl;
