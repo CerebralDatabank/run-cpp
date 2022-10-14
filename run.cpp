@@ -1,5 +1,7 @@
 #include <iostream>
+#include <filesystem>
 using std::cout, std::endl;
+namespace fs = std::filesystem;
 
 int main() {
   cout << "\x1B[96mrun v1.0.0-alpha by CerebralDatabank (Gopal Othayoth)\x1B[0m" << endl;
@@ -7,6 +9,18 @@ int main() {
 
   int result{0};
 
+  if (!fs::is_directory("src")) {
+    cout << "\x1B[31m[ ERROR ]\x1B[0m ./src/ directory does not exist; exiting.\x1B[0m" << endl;
+    return 1;
+  }
+
+  if (!fs::is_directory("bin")) {
+    cout << "\x1B[94m[  INFO ]\x1B[0m ./bin/ directory does not exist, creating...\x1B[0m" << endl;
+    if (!fs::create_directory("bin")) {
+        cout << "\x1B[31m[ ERROR ]\x1B[0m Failed to create ./bin/ directory; exiting.\x1B[0m" << endl;
+        return 1;
+    }
+  }
 
   result = system("g++ -Wall -Wextra -pedantic -std=c++17 -g ./src/*.cpp -o ./bin/a.out");
   if (result != 0) {
