@@ -4,7 +4,7 @@ using std::cout, std::endl;
 namespace fs = std::filesystem;
 
 int main() {
-  cout << "\x1B[96mrun v1.0.0-alpha by CerebralDatabank (Gopal Othayoth)\x1B[0m" << endl;
+  cout << "\x1B[96mrun v1.0.0-alpha.1 by CerebralDatabank (Gopal Othayoth)\x1B[0m" << endl;
   cout << "\x1B[96m== COMPILING ==\x1B[0m" << endl << endl;
 
   int result{0};
